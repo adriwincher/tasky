@@ -11,10 +11,10 @@ steps:
     args: ['push', 'us-west1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/my-image']
 
 # Deploy the image to Cloud Run using the 'gcr.io/cloudrun/deploy' image.
-# The service name is 'my-cloud-run-service'.
+# The service name is 'tasky-app-via-cloudbuild'.
 # The image tag is 'us-west1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/my-image'.
   - name: 'gcr.io/cloudrun/deploy'
-    args: ['--image', 'us-west1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/my-image', '--region', 'us-west1', '--platform', 'managed', '--service', 'my-cloud-run-service']
+    args: ['--image', 'us-west1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/my-image', '--region', 'us-west1', '--platform', 'managed', '--service', 'tasky-app-via-cloudbuild']
 
 # Configure Cloud Build to store build logs in Cloud Logging.
 options:
